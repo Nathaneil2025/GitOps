@@ -11,10 +11,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - quntamvector.in
+    - app.myjenkinsdomain.com
     secretName: frontend-tls
   rules:
-  - host: quntamvector.in
+  - host: app.myjenkinsdomain.com
     http:
       paths:
       - path: /
