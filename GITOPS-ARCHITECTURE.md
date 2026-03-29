@@ -240,7 +240,7 @@ Each service has its own ArgoCD `Application` resource pointing to its directory
 | shoppingassistantservice | base/shoppingassistantservice | default |
 | vectordb | base/vectordb | default |
 
-All apps point to: `https://github.com/ITkannadigaru/GitOps.git` on branch `main`
+All apps point to: `https://github.com/QuntamVector/GitOps.git` on branch `main`
 
 ---
 

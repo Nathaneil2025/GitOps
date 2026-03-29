@@ -221,7 +221,7 @@ Cluster state matches Git state (self-healed if drifted)
 | `overlays/eks/` | AWS EKS production | 2 for key services | Patches commented out, ready to activate |
 
 ### ArgoCD Settings
-- **Repo:** `https://github.com/ITkannadigaru/GitOps.git`
+- **Repo:** `https://github.com/QuntamVector/GitOps.git`
 - **Branch:** `main`
 - **Namespace:** `default`
 - **Auto-sync:** enabled
