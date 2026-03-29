@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -7,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/adservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -28,12 +27,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/cartservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -49,12 +48,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/checkoutservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -70,12 +69,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/currencyservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -91,12 +90,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/emailservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -112,12 +111,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/frontend
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -133,12 +132,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/loadgenerator
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -154,12 +153,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/paymentservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -175,12 +174,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/productcatalogservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -196,12 +195,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/recommendationservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -217,12 +216,33 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/shippingservice
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shoppingassistantservice
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
+    targetRevision: main
+    path: base/shoppingassistantservice
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
@@ -238,27 +258,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
+    repoURL: https://github.com/Nathaneil2025/GitOps.git
     targetRevision: main
     path: base/vectordb
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/QuntamVector/GitOps.git
-    targetRevision: main
-    path: base/shoppingassistantservice
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
+    namespace: itkannadigaru
   syncPolicy:
     automated:
       prune: true
